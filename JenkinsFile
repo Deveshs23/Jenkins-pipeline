@@ -6,14 +6,12 @@ pipeline {
         {
             steps{
             sh 'git clone https://github.com/Deveshs23/spring3hibernate.git'
-            sh 'cd spring3hibernate'
             }
         }
         stage('Code Stability')
         {
             steps{
-						sh 'cd spring3hibernate'
-            sh 'mvn compile'
+						sh 'cd spring3hibernate; mvn compile'
             }
         }
     }
