@@ -5,13 +5,13 @@ pipeline {
         stage('Git Clone')
         {
             steps{
-            sh 'git clone https://github.com/Deveshs23/spring3hibernate.git'
+            sh 'rm -rf spring3hibernate  git clone https://github.com/Deveshs23/spring3hibernate.git'
             }
         }
         stage('Code Stability')
         {
             steps{
-						sh 'cd /var/lib/jenkins/workspace/First_pipeline/spring3hibernate; mvn compile'
+						sh 'cd spring3hibernate; mvn compile'
             }
         }
     }
