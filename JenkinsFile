@@ -12,6 +12,7 @@ pipeline {
         stage('Code Stability')
         {
             steps{
+						sh 'cd spring3hibernate'
             sh 'mvn compile'
             }
         }
