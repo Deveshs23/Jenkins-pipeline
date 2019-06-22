@@ -18,14 +18,24 @@ pipeline {
        {
           steps{
           input 'Enter Your Input: '
-          sh 'mvn checkstyle:checkstyle'
+          sh 'cd spring3hibernate; mvn checkstyle:checkstyle'
+        //  checkstyle()
             }
       }
        stage('Code Coverage')
       {
            steps{
-               sh 'mvn cobertura:cobertura'
+               sh 'cd spring3hibernate; mvn cobertura:cobertura'
+          //     cobertura()
            }
+       stage('Publish coverage')
+         {
+           steps{
+                  checkstyle()
+                  cobertura()
+                }
+         }
+
       }
         }
     }
