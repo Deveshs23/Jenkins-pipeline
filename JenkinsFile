@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages
+    {
+        stage('Git Clone')
+        {
+            steps{
+            sh 'git clone https://github.com/Deveshs23/spring3hibernate.git'
+            sh 'cd spring3hibernate'
+            }
+        }
+        stage('Code Stability')
+        {
+            steps{
+            sh 'mvn compile'
+            }
+        }
+    }
+    
+}
