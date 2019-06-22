@@ -5,7 +5,7 @@ pipeline {
         stage('Git Clone')
         {
             steps{
-            sh 'rm -rf spring3hibernate  git clone https://github.com/Deveshs23/spring3hibernate.git'
+            sh 'rm -rf spring3hibernate;  git clone https://github.com/Deveshs23/spring3hibernate.git'
             }
         }
         stage('Code Stability')
