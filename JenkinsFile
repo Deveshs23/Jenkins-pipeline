@@ -13,6 +13,7 @@ pipeline {
             steps{
             sh 'cd spring3hibernate; mvn compile'
             }
+        }
         stage('Code quality')
        {
           steps{
@@ -29,4 +30,4 @@ pipeline {
         }
     }
     
-}
+
