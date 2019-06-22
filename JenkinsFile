@@ -28,6 +28,7 @@ pipeline {
                sh 'cd spring3hibernate; mvn cobertura:cobertura'
           //     cobertura()
            }
+       }
        stage('Publish coverage')
          {
            steps{
