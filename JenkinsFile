@@ -17,7 +17,7 @@ pipeline {
         stage('Code quality')
        {
           steps{
-          input 'Enter Your Input: '
+    //      input 'Enter Your Input: '
           sh 'mvn checkstyle:checkstyle'
             }
       }
